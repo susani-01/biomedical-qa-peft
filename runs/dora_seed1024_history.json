@@ -1,0 +1,114 @@
+[
+  {
+    "epoch": 0.25133689839572193,
+    "step": 141,
+    "training_loss_running_epoch": 3.3143338916149547,
+    "validation": {
+      "loss": 2.2591033838563046,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.44129554655870445,
+      "question_macro_em": 0.42354779801303866,
+      "f1": 0.5721177741383053,
+      "question_macro_f1": 0.5552344496863978
+    }
+  },
+  {
+    "epoch": 0.5026737967914439,
+    "step": 282,
+    "training_loss_running_epoch": 2.538470377419012,
+    "validation": {
+      "loss": 2.007922290947478,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.4534412955465587,
+      "question_macro_em": 0.4156155341984219,
+      "f1": 0.5983136746294642,
+      "question_macro_f1": 0.5503768891990843
+    }
+  },
+  {
+    "epoch": 0.7540106951871658,
+    "step": 423,
+    "training_loss_running_epoch": 2.156822363090818,
+    "validation": {
+      "loss": 1.8461975853321917,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.4939271255060729,
+      "question_macro_em": 0.461164437167111,
+      "f1": 0.6416407999510493,
+      "question_macro_f1": 0.6184492419919351
+    }
+  },
+  {
+    "epoch": 1.0,
+    "step": 561,
+    "training_loss_running_epoch": 1.9064301638824501,
+    "validation": {
+      "loss": 1.7838509721271063,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.5344129554655871,
+      "question_macro_em": 0.5132180208383418,
+      "f1": 0.6910421515967241,
+      "question_macro_f1": 0.657697267845111
+    }
+  },
+  {
+    "epoch": 1.251336898395722,
+    "step": 702,
+    "training_loss_running_epoch": 0.8803439499110195,
+    "validation": {
+      "loss": 1.8226452039460004,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.5708502024291497,
+      "question_macro_em": 0.5425943263510109,
+      "f1": 0.6990189971971349,
+      "question_macro_f1": 0.6493884209084122
+    }
+  },
+  {
+    "epoch": 1.5026737967914439,
+    "step": 843,
+    "training_loss_running_epoch": 0.8224885653810087,
+    "validation": {
+      "loss": 1.9458744230916944,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.5344129554655871,
+      "question_macro_em": 0.5197594406484781,
+      "f1": 0.660725011776014,
+      "question_macro_f1": 0.6380598193847575
+    }
+  },
+  {
+    "epoch": 1.7540106951871657,
+    "step": 984,
+    "training_loss_running_epoch": 0.7984045654288702,
+    "validation": {
+      "loss": 2.042453513610161,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.5546558704453441,
+      "question_macro_em": 0.5321082438061048,
+      "f1": 0.6877900776686202,
+      "question_macro_f1": 0.648649866576921
+    }
+  },
+  {
+    "epoch": 2.0,
+    "step": 1122,
+    "training_loss_running_epoch": 0.8145823576959288,
+    "validation": {
+      "loss": 1.838271942583181,
+      "examples": 247,
+      "questions": 44,
+      "em": 0.5020242914979757,
+      "question_macro_em": 0.4733622104277185,
+      "f1": 0.67470024185507,
+      "question_macro_f1": 0.6450802741004649
+    }
+  }
+]

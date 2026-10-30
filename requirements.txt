@@ -1,0 +1,23 @@
+# Python 3.12.4
+# Recorded platform: macOS-15.5-arm64-arm-64bit (Apple M1 Pro, 16 GiB)
+#
+# The five pins below are copied verbatim from the "versions" block recorded in
+# all nine configs/*_config.json files. All nine agree. Nothing here is guessed.
+torch==2.6.0
+transformers==4.41.2
+peft==0.10.0
+numpy==1.26.4
+psutil==6.1.0
+
+# Required by code/audit_tokenization.py, which imports:
+#   sklearn.model_selection.train_test_split
+#   tensorboard.backend.event_processing.event_accumulator.EventAccumulator
+# No version is recorded for either package in any copied config.json, so they
+# are deliberately left unpinned rather than invented.
+scikit-learn
+tensorboard
+
+# Required by code/plot_runs.py, which imports matplotlib and matplotlib.pyplot
+# (lines 14-16) and sets the Agg backend. No matplotlib version is recorded in
+# any copied config.json either, so this is also left unpinned, not invented.
+matplotlib

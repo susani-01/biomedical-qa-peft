@@ -1,0 +1,80 @@
+{
+  "started_utc": "2026-10-23T12:59:56.890846+00:00",
+  "learning_rates": {
+    "fft": 4e-05,
+    "lora": 0.0003,
+    "dora": 0.0002
+  },
+  "training_seeds": [
+    42,
+    123,
+    1024
+  ],
+  "max_epochs": 2,
+  "batch_size": 4,
+  "device": "mps",
+  "precision": "float32",
+  "max_length": 384,
+  "stride": 128,
+  "max_answer_tokens": 30,
+  "validations_per_epoch": 4,
+  "checkpoint_selection": "maximum validation pair F1; earliest on ties",
+  "order": [
+    {
+      "seed": 42,
+      "method": "fft"
+    },
+    {
+      "seed": 42,
+      "method": "lora"
+    },
+    {
+      "seed": 42,
+      "method": "dora"
+    },
+    {
+      "seed": 123,
+      "method": "lora"
+    },
+    {
+      "seed": 123,
+      "method": "dora"
+    },
+    {
+      "seed": 123,
+      "method": "fft"
+    },
+    {
+      "seed": 1024,
+      "method": "dora"
+    },
+    {
+      "seed": 1024,
+      "method": "fft"
+    },
+    {
+      "seed": 1024,
+      "method": "lora"
+    }
+  ],
+  "source_hashes": {
+    "run_experiment.py": "45992d7062cf7dc84dbd95cfa2fc1c2965589ecd40a58765a0603f9759664969",
+    "qa_core.py": "1eabab0dbc64b459405c34ac84f2a2360c57359c01eac6c5a6dd92a8b304f441",
+    "summarize_runs.py": "65dd626274e2fe1f1bfcec79c8675de701a01ea3cf0cf25002e0d85cbd65b132",
+    "plot_runs.py": "261c395e0ee79cf49fd1475c1f6f84ff5452d54f933ad9faf7af3116d0bda8e6"
+  },
+  "manifest_file_sha256": "1ffd1d32f1009f1972e65beba78aef7cffb6753df88d48814ac23e45182be186",
+  "manifest_sha256": "ad1ebb4838ae9dc5d8edfcd8945c6563640b6d9ae390b1d442e397a6a32a30ab",
+  "model_path": "<PATH>",
+  "model_file_hashes": {
+    "tokenizer_config.json": "98632482a9851173e796e4366ede775ddc2900564a0ac659acb89248e39fbbd3",
+    "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+    "config.json": "2813315bbd4843441359f2c98be9241f76b962af4a77058a9429fdeb553bdfbc",
+    "tokenizer.json": "5a797027c356bfdc779fd021b4a7a2b2f341242ddd7035d385f56b8e242dac2a",
+    "vocab.txt": "7b36651908a88bc38bda41b728b2a598191e0d3b553cbacf7b1e5f026d5b5b9f",
+    "pytorch_model.bin": "acc5ae5f16206b893adfcf10772ee4472e24d7847145ac961097bd06129e2ece"
+  },
+  "chip": "Apple M1 Pro",
+  "learning_rate_basis": "User confirms rates selected in prior experiments; no new search in this batch.",
+  "warning": "learning_rate_basis": "Rates fixed in advance from preliminary experiments; no search in this batch. The selection record could not be recovered; see Section 3.5 of the manuscript."
+}

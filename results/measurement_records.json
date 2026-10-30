@@ -1,0 +1,263 @@
+{
+  "fft_seed42": {
+    "resources": {
+      "training_seconds": 550.2902072947472,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 785858560,
+        "mps_tensor_bytes": 4483569408,
+        "mps_driver_bytes": 5658935296
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 23191,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 627.4716672500363,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "fft_seed123": {
+    "resources": {
+      "training_seconds": 544.2597695839358,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 1070891008,
+        "mps_tensor_bytes": 4483569152,
+        "mps_driver_bytes": 5642141696
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 22844,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 619.4382924169768,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "fft_seed1024": {
+    "resources": {
+      "training_seconds": 545.3915034558158,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 1073414144,
+        "mps_tensor_bytes": 4483569664,
+        "mps_driver_bytes": 5642141696
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 21669,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 622.2348147500306,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "lora_seed42": {
+    "resources": {
+      "training_seconds": 523.3953477080213,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 852312064,
+        "mps_tensor_bytes": 3730767872,
+        "mps_driver_bytes": 4446797824
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 22051,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 621.8194270000095,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "lora_seed123": {
+    "resources": {
+      "training_seconds": 527.893982543028,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 852213760,
+        "mps_tensor_bytes": 3730767872,
+        "mps_driver_bytes": 4447928320
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 22274,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 627.4024119579699,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "lora_seed1024": {
+    "resources": {
+      "training_seconds": 512.7246726680314,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 906952704,
+        "mps_tensor_bytes": 3730767872,
+        "mps_driver_bytes": 4447928320
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 19143,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 610.0878855419578,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "dora_seed42": {
+    "resources": {
+      "training_seconds": 850.4066544151865,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 915652608,
+        "mps_tensor_bytes": 4807660032,
+        "mps_driver_bytes": 5563695104
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 35938,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 1026.371486625052,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "dora_seed123": {
+    "resources": {
+      "training_seconds": 832.7242994162953,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 914866176,
+        "mps_tensor_bytes": 4807659264,
+        "mps_driver_bytes": 5563564032
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 34904,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 1005.1276169579942,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  },
+  "dora_seed1024": {
+    "resources": {
+      "training_seconds": 828.4983586678281,
+      "sampled_maxima_bytes": {
+        "process_rss_bytes": 924270592,
+        "mps_tensor_bytes": 4807659776,
+        "mps_driver_bytes": 5563678720
+      },
+      "sampling_interval_seconds": 0.02,
+      "samples": 33432,
+      "errors": [],
+      "scope": "Training batches only: includes tensor transfer, forward/backward, optimizer and monitoring; excludes tokenization, validation, checkpoint I/O, test.",
+      "precision": "Sampled maxima can miss short-lived peaks. RSS and MPS share unified memory; do not add them."
+    },
+    "fit_including_validation_and_checkpoint_seconds": 1003.0862061250955,
+    "hardware": {
+      "machine": "arm64",
+      "cpu_count": 10,
+      "physical_memory_bytes": 17179869184,
+      "torch_threads": 8
+    },
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "4.41.2",
+      "peft": "0.10.0",
+      "numpy": "1.26.4",
+      "psutil": "6.1.0"
+    }
+  }
+}
