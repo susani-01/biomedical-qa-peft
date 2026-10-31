@@ -191,6 +191,13 @@ context or answer text. Its three blocks are:
   non-grouped split with train/test leakage and a different evaluator. They are
   superseded, are not comparable to the numbers here, and are excluded.
 
+  The counts-only audit artifact `audits/tokenization_and_curves.json` retains
+  numerical metadata from superseded experiments for provenance. Its
+  `legacy_test` and `figure_logs` blocks do not represent the nine runs
+  reported in the manuscript and must not be used to reproduce or compare the
+  current study's results. The `corrected_window_coverage` block supports the
+  reported preprocessing and answer-coverage counts.
+
 ## Reproducibility scope and additional inputs
 
 Recomputing the reported bootstrap intervals from the original runs requires the
