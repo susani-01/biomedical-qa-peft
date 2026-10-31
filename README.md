@@ -137,12 +137,52 @@ The secondary metrics produce different numerical model rankings, highlighting t
   282, 423, 561, 702, 843, 984 and 1,122)
 - `results/` — per-seed and aggregate metrics, the efficiency table, and the
   consolidated resource measurement records
+- `splits/split_manifest.csv` — Text-free split membership containing example
+  identifiers, original question identifiers, connected-component identifiers,
+  and train/validation/test assignments. Question, context, and answer text are
+  excluded.
+- `audits/tokenization_and_curves.json` — the retained tokenization and
+  window-coverage audit record (see below)
+
+### Units in `results/efficiency.csv`
+
+Memory values in `results/efficiency.csv` are expressed in MiB, whereas Table 2
+of the manuscript reports GiB. Memory means and standard deviations are
+converted from MiB to GiB by dividing by 1,024. Relative percentage changes are
+unchanged by this unit conversion.
+
+### Tokenization and window-coverage audit
+
+`audits/tokenization_and_curves.json` is a verbatim copy of the audit record
+written by `audit_tokenization.py` during the revision, retained here because
+the script cannot rewrite it from this package alone (see "Reproducibility scope
+and additional inputs"). It contains counts and scalars only — no question,
+context or answer text. Its three blocks are:
+
+- `corrected_window_coverage` — per split, for the fixed grouped split used for
+  all nine reported runs: the example count, the number of 384-token windows at
+  stride 128, the number of retained answer references, how many of those
+  references were covered by at least one complete window, and how many
+  examples have a shortest answer exceeding the 30-token decoding limit. These
+  are the figures behind the reported 2,241/295/631 windows, the 2,682/436/768
+  fully covered references, and the single affected test example.
+- `legacy_test` — tokenization-failure counts for the **superseded** earlier
+  non-grouped split (955 test examples). Retained as audit evidence of the
+  earlier split's defects only. These numbers describe data that is not
+  comparable to the reported results.
+- `figure_logs` — the sparse validation scalars read from the legacy
+  TensorBoard event directories of the **superseded** earlier runs. Retained as
+  provenance for the earlier figure only. They are not results of the nine runs
+  reported here and must not be compared with `runs/` or `results/`.
 
 ## What is not included
 
-- **The dataset file and the split manifest.** Both contain third-party source
-  question and context text and are not redistributed. See the Dataset section
-  for how to obtain and verify the source file.
+- **The dataset file and the full split manifest.** Both contain third-party
+  source question and context text and are not redistributed. This exclusion
+  covers the full, text-containing split files only; it does not cover the
+  text-free identifier export `splits/split_manifest.csv`, which is included
+  and carries no question, context or answer text. See the Dataset section for
+  how to obtain and verify the source file.
 - **Model checkpoints** (`best_state.pt`, 431–442 MB each, 3.9 GB in total) —
   omitted for size.
 - **Per-example test predictions and the raw per-run result records** —

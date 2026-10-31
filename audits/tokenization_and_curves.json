@@ -1,0 +1,100 @@
+{
+  "legacy_test": {
+    "test_examples": 955,
+    "missing_start": 29,
+    "missing_end": 28,
+    "both_missing": 28,
+    "empty_decoded_reference": 28
+  },
+  "corrected_window_coverage": {
+    "train": {
+      "examples": 1787,
+      "windows": 2241,
+      "references": 2682,
+      "covered_references": 2682,
+      "examples_whose_shortest_answer_exceeds_30_tokens": 4
+    },
+    "validation": {
+      "examples": 247,
+      "windows": 295,
+      "references": 436,
+      "covered_references": 436,
+      "examples_whose_shortest_answer_exceeds_30_tokens": 0
+    },
+    "test": {
+      "examples": 502,
+      "windows": 631,
+      "references": 768,
+      "covered_references": 768,
+      "examples_whose_shortest_answer_exceeds_30_tokens": 1
+    }
+  },
+  "figure_logs": {
+    "fft": {
+      "val_loss": [
+        {
+          "step": 834,
+          "value": 1.3857851028442383
+        },
+        {
+          "step": 1669,
+          "value": 1.2961832284927368
+        }
+      ],
+      "val_exact_match": [
+        {
+          "step": 834,
+          "value": 0.44560670852661133
+        },
+        {
+          "step": 1669,
+          "value": 0.48326361179351807
+        }
+      ]
+    },
+    "lora": {
+      "val_loss": [
+        {
+          "step": 834,
+          "value": 1.3469740152359009
+        },
+        {
+          "step": 1669,
+          "value": 1.3039225339889526
+        }
+      ],
+      "val_exact_match": [
+        {
+          "step": 834,
+          "value": 0.42677825689315796
+        },
+        {
+          "step": 1669,
+          "value": 0.4581589996814728
+        }
+      ]
+    },
+    "dora": {
+      "val_loss": [
+        {
+          "step": 834,
+          "value": 1.4253637790679932
+        },
+        {
+          "step": 1669,
+          "value": 1.259555459022522
+        }
+      ],
+      "val_exact_match": [
+        {
+          "step": 834,
+          "value": 0.428870290517807
+        },
+        {
+          "step": 1669,
+          "value": 0.4581589996814728
+        }
+      ]
+    }
+  }
+}

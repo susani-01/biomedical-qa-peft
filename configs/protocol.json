@@ -75,6 +75,5 @@
     "pytorch_model.bin": "acc5ae5f16206b893adfcf10772ee4472e24d7847145ac961097bd06129e2ece"
   },
   "chip": "Apple M1 Pro",
-  "learning_rate_basis": "User confirms rates selected in prior experiments; no new search in this batch.",
-  "warning": "learning_rate_basis": "Rates fixed in advance from preliminary experiments; no search in this batch. The selection record could not be recovered; see Section 3.5 of the manuscript."
+  "learning_rate_basis": "Method-specific learning rates were retained from preliminary experiments and fixed across the three reported seeds. Complete candidate-by-candidate selection records are unavailable. The recovered preliminary EM and F1 values were computed on the test partition of an earlier, superseded split; therefore, validation-only tuning cannot be verified and selection-related optimism cannot be excluded. See Section 3.5 of the manuscript."
 }
