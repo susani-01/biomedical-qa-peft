@@ -203,7 +203,7 @@ context or answer text. Its three blocks are:
 Recomputing the reported bootstrap intervals from the original runs requires the
 per-run `result.json` and `test_predictions.json` files. `summarize_runs.py`
 reads both for every run directory it is given — `result.json` at line 17 and
-`test_predictions.json` at line 37 — and the paired hierarchical bootstrap
+`test_predictions.json` at line 37 — and the paired crossed bootstrap
 resamples the per-example scores held in `test_predictions.json`. **These files
 are not included in this public repository; they are available from the
 corresponding author on request.** The public aggregate summaries alone are
