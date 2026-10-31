@@ -116,12 +116,6 @@ python3 run_experiment.py --manifest <manifest> --model <snapshot dir> --local-f
   --out <new run dir>
 ```
 
-Aggregation across the nine completed run directories:
-
-```
-python3 summarize_runs.py <run dir> [<run dir> ...] --out <new summary dir>
-```
-
 ### Primary and Secondary Evaluation Metrics
 
 The manuscript reports pair-weighted Exact Match (EM) and F1 scores as the primary evaluation metrics. These scores are averaged over merged question/context pairs.
@@ -156,6 +150,53 @@ The secondary metrics produce different numerical model rankings, highlighting t
 - **Earlier results.** Results produced before this protocol used a different,
   non-grouped split with train/test leakage and a different evaluator. They are
   superseded, are not comparable to the numbers here, and are excluded.
+
+## Reproducibility scope and additional inputs
+
+Recomputing the reported bootstrap intervals from the original runs requires the
+per-run `result.json` and `test_predictions.json` files. `summarize_runs.py`
+reads both for every run directory it is given — `result.json` at line 17 and
+`test_predictions.json` at line 37 — and the paired hierarchical bootstrap
+resamples the per-example scores held in `test_predictions.json`. **These files
+are not included in this public repository; they are available from the
+corresponding author on request.** The public aggregate summaries alone are
+insufficient: `results/summary.json`, `results/per_seed.csv` and
+`results/efficiency.csv` record the resulting intervals and per-seed means, but
+not the per-example scores and group assignments the resampling draws from, so
+the intervals cannot be recomputed from them.
+
+The plotting workflow requires the same per-run files. `plot_runs.py` calls
+`summarize_runs.summarize()` (line 17), so it inherits that requirement in full,
+in addition to the per-run `config.json` and `history.json` it reads itself
+(lines 36–37).
+
+`audit_tokenization.py` depends on legacy TensorBoard event directories that are
+not included in this release — `lightning_logs/link_model/version_6`,
+`lightning_logs/lora_seeds/version_4` and `lightning_logs/dora_seed/version_5`,
+read at lines 49–53. It reads those logs *before* it writes its combined report
+at line 55, so it **cannot complete its full audit from the public package
+alone**: the per-split window-coverage figures are still printed to standard
+output as they are computed (line 47), but `artifacts/tokenization_and_curves.json`
+is never written. The script also expects the split manifest at
+`artifacts/split_manifest.json` beside itself, which must be generated first as
+described above.
+
+Rerunning training produces new outputs and is distinct from reanalysing the
+retained outputs of the original nine runs. `run_nine.py` and
+`run_experiment.py` train fresh models and write fresh run directories; since
+bitwise reproducibility is not guaranteed (see Determinism), those outputs are
+not expected to match the retained per-run records of the original nine runs,
+and the two activities must not be conflated.
+
+### Commands requiring additional inputs
+
+Aggregation across the nine completed run directories, each of which must
+contain `result.json` and `test_predictions.json` (not in this package; see
+above):
+
+```
+python3 summarize_runs.py <run dir> [<run dir> ...] --out <new summary dir>
+```
 
 ## Determinism
 
